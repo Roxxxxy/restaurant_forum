@@ -3,10 +3,10 @@
   <% @restaurants.each do |restaurant| %>
   <li>
     <%= restaurant.name %>
-    <%= link_to 'Show', admin_restaurants_path(restaurant) %>
-    <%= link_to 'Edit', edit_restaurants_path(restaurant) %>
-    <%= link_to 'Delete', admin_restaurants_path(restaurant), method: :delete, data: {confirm:"Are you sure?"}  %>
+    <%= link_to 'Show', admin_restaurant_path(restaurant) %>
+    <%= link_to 'Edit', edit_admin_restaurant_path(restaurant) %>
+    <%= link_to 'Delete', admin_restaurant_path(restaurant), method: :delete, data: {confirm:"Are you sure?"}  %>
   </li>
   <% end %>
 </ul>
-<%= link_to 'New Restaurant', new_admin_restaurants_path %>
+<%= link_to 'New Restaurant', new_admin_restaurant_path %>

@@ -20,7 +20,11 @@ class Admin::RestaurantsController < ApplicationController
       flash.now[:alert] = "restaurant was failed to create"
       render :new
     end
-  end  
+  end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
 
     private
 
